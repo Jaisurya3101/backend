@@ -14,12 +14,6 @@ services:
         value: 10000
       - key: HOST
         value: 0.0.0.0
-      - key: SECRET_KEY
-        value: your-secret-key-here
-      - key: API_USERNAME
-        value: admin
-      - key: API_PASSWORD
-        value: secure-password-here
     healthCheckPath: /api/v1/health
     autoDeploy: true
     scaling:
