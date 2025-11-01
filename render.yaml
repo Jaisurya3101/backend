@@ -2,6 +2,7 @@ services:
   - type: web
     name: shield-x-api
     env: python
+    plan: free
     buildCommand: |
       pip install -r requirements.txt
       python setup_models.py
@@ -13,3 +14,6 @@ services:
         value: 8000
     healthCheckPath: /api/v1/health
     autoDeploy: true
+    scaling:
+      minInstances: 1
+      maxInstances: 1
